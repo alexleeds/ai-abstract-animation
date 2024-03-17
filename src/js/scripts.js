@@ -71,12 +71,33 @@ camera.add(listener);
 const sound = new THREE.Audio(listener);
 
 const audioLoader = new THREE.AudioLoader();
-audioLoader.load('./assets/Beats.mp3', function(buffer) {
-	sound.setBuffer(buffer);
-	window.addEventListener('click', function() {
-		sound.play();
+// audioLoader.load('./assets/GPT4_Opening Statement_Negative.mp3', function(buffer) {
+// 	sound.setBuffer(buffer);
+// 	window.addEventListener('click', function() {
+// 		sound.play();
+// 	});
+// });
+
+document.getElementById('playButton').addEventListener('click', function() {
+	const selectedFile = document.getElementById('mp3Selector').value;
+	
+	// Check if a sound is already playing, and if so, stop it.
+	if (sound.isPlaying) {
+	  sound.stop();
+	}
+  
+	// Load and play the selected MP3 file
+	audioLoader.load(selectedFile, function(buffer) {
+	  sound.setBuffer(buffer);
+	  sound.play();
 	});
-});
+  
+	// Since the file is changed, recreate the analyser to analyze the new sound
+	analyser = new THREE.AudioAnalyser(sound, 32);
+  
+	// Update the u_frequency uniform to reflect changes in the new audio
+	uniforms.u_frequency.value = analyser.getAverageFrequency();
+  });
 
 const analyser = new THREE.AudioAnalyser(sound, 32);
 

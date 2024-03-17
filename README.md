@@ -1,6 +1,8 @@
-# audiovisualizer
+# AI Debate Animation
 
-"How To Create A 3D Audio Visualizer Using Three.js" YouTube tutorial project files https://youtu.be/qDIF2z_VtHs
+This animator is based on the instructions and original repo referenced here:
+"How To Create A 3D Audio Visualizer Using Three.js" YouTube tutorial and project files by Wael Yasmina: https://youtu.be/qDIF2z_VtHs
+
 
 1. Clone the repository;
 2. Open the folder in Visual Studio Code;

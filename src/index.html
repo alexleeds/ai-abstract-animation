@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perlin Noise X Vertex Shader</title>
+    <title>AI Representation</title>
     <style>
         body {
             margin: 0;
@@ -12,6 +12,12 @@
     </style>
 </head>
 <body>
+    <select id="mp3Selector">
+      <option value="./assets/GPT4sOpeningStatementAffirmative.mp3.mp3">GPT-4 Opening Statement Affirmative</option>
+      <option value="./assets/GeminiProsOpeningStatementNegative.mp3">GeminiProsOpeningStatementNegative</option>
+      <!-- Add more options as needed -->
+    </select>
+    <button id="playButton">Play</button>
     <script id="vertexshader" type="vertex">
       uniform float u_time;
 
