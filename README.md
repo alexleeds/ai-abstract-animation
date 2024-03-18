@@ -1,6 +1,6 @@
 # AI Debate Animation
 
-This animator is based on the instructions and original repo referenced here:
+This animator is based:
 "How To Create A 3D Audio Visualizer Using Three.js" YouTube tutorial and project files by Wael Yasmina: https://youtu.be/qDIF2z_VtHs
 
 
